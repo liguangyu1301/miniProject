@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/me/me",
+    "pages/list/list",
+    "pages/topic/topic",
+    "pages/newdetail/newdetail"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FF003A",
+    "navigationBarTitleText": "我趣购",
+    "navigationBarTextStyle": "white"
+  },
+  "cloud": true,
+  "tabBar": {
+    "selectedColor": "#FF003A"
+    ,
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/ic_home_unselected.png",
+        "selectedIconPath": "images/ic_home_selected.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/topic/topic",
+        "iconPath": "images/ic_social_unseclted.png",
+        "selectedIconPath": "images/ic_social_seclted.png",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "iconPath": "images/ic_me_unselected.png",
+        "selectedIconPath": "images/ic_me_selected.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  }
+}

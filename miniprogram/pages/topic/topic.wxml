@@ -1,0 +1,32 @@
+<!--pages/topic/topic.wxml-->
+<van-tabs sticky scroll-top="0" bind:change="onChange">
+  <van-tab title="头条"></van-tab>
+  <van-tab title="精选"></van-tab>
+  <van-tab title="娱乐"></van-tab>
+  <van-tab title="汽车"></van-tab>
+  <van-tab title="运动"></van-tab>
+</van-tabs>
+<view class='list-container'>
+<scroll-view scroll-y="true" scroll-top="{{scrollTop}}">
+  <block wx:for="{{newsData}}" wx:for-item="item" wx:key="index" wx:for-index="idx">
+    <view class='news-item' bindtap='goDetail' data-weburl='{{item.url}}'>
+      <view wx:if="{{item.imgsrc.length > 0}}">
+        <image class='news-img' src='{{item.imgsrc}}'></image> 
+      </view>
+      <view wx:else>
+        <image class='news-img' src='../../images/banner1.jpg'></image>
+      </view>
+
+      <!-- 右侧文字区域 -->
+      <view class='news-text'>
+        <text class='news-title'>{{item.title}}            </text>
+        <!-- 阅读量和回复量 -->
+        <view class='news-count'>
+          <text class='see-count'>阅读:{{item.votecount}}</text>
+          <text class='reply-count'>回复:{{item.replyCount}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+  </scroll-view>
+</view>

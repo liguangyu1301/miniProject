@@ -1,0 +1,8 @@
+<!--pages/newdetail/newdetail.wxml-->
+
+
+<web-view src="{{weburl}}"></web-view>
+
+<!-- <web-view src="http://3g.163.com/news/19/0106/20/E4S5AP2H0001875O.html"></web-view> -->
+
+ 

@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<view class="container">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='swipeContainer'>
+    <swiper-item>
+      <image class="swiperimg" class='swiperimg' src="../../images/banner1.jpg" data-newsId="2"></image>
+    </swiper-item>
+    <swiper-item>
+      <image class="swiperimg" class='swiperimg' src="../../images/banner2.jpg" data-newsId="3"></image>
+    </swiper-item>
+    <swiper-item>
+      <image class="swiperimg" class='swiperimg' src="../../images/banner3.jpg" data-newsId="4"></image>
+    </swiper-item>
+  </swiper>
+  <!-- 推荐 -->
+  <view class='commend'>
+    <text class='commend-text'>推荐</text>
+  </view>
+  <!-- 列表 -->
+  <block wx:for="{{newsData}}" wx:for-item="item" wx:key="index" wx:for-index="idx">
+    <view class='news-item'  bindtap='goDetail' data-weburl='{{item.url}}'>
+      <view wx:if="{{item.imgsrc.length > 0}}">
+        <image class='news-img' src='{{item.imgsrc}}'></image> 
+      </view>
+      <view wx:else>
+        <image class='news-img' src='../../images/banner1.jpg'></image>
+      </view>
+
+      <!-- 右侧文字区域 -->
+      <view class='news-text'>
+        <text class='news-title'>{{item.title}}            </text>
+        <!-- 阅读量和回复量 -->
+        <view class='news-count'>
+          <text class='see-count'>阅读:{{item.votecount}}</text>
+          <text class='reply-count'>回复:{{item.replyCount}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+<van-dialog id="van-dialog" />

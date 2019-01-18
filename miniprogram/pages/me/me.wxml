@@ -1,0 +1,48 @@
+<view class="container">
+
+  
+
+  <!-- 用户 openid -->
+  <view class="userinfo">
+    <button 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      style="background-image: url({{avatarUrl}})"
+    ></button>
+    <view>
+      <button class="userinfo-nickname">{{nickname}}</button>
+    </view>
+  </view>
+  <!-- 跟人资料 -->
+  <view class='me-item'>
+      <view class='left-area'></view>
+      <text class='item-title'>个人资料</text>
+      <image class="item-img" src='./ic_arrow_right.png'></image>
+  </view>
+   <!-- 我的收藏 -->
+  <view class='me-item'>
+      <view class='left-area-1'></view>
+      <text class='item-title'>我的收藏</text>
+      <image class="item-img" src='./ic_arrow_right.png'></image>
+  </view>
+   <!-- 浏览记录 -->
+  <view class='me-item'>
+      <view class='left-area-2'></view>
+      <text class='item-title'>浏览记录</text>
+      <image class="item-img" src='./ic_arrow_right.png'></image>
+  </view>
+   <!-- 版本 -->
+  <view class='me-item'>
+      <view class='left-area-3'></view>
+      <text class='item-title'>版本</text>
+      <image class="item-img" src='./ic_arrow_right.png'></image>
+  </view>
+  <!-- 关于 -->
+  <view class='me-item'>
+      <view class='left-area-4'></view>
+      <text class='item-title'>关于</text>
+      <image class="item-img" src='./ic_arrow_right.png'></image>
+  </view>
+</view>
+<van-toast id="van-toast" />
